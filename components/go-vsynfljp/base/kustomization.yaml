@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: go-vsynfljp
+  janus-idp.io/tekton: go-vsynfljp
+  backstage.io/kubernetes-id: go-vsynfljp
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-vsynfljp
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
